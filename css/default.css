@@ -1,0 +1,81 @@
+/* CSS Document for the "Sea Life" CoffeeCup Software HTML Editor Template
+   Copyright 2008 CoffeeCup Software - coffeecup.com */
+
+/*##############################################################
+  Eric Meyer's Latest version of Reset.css (includes Baseline)
+##############################################################*/ 
+
+html, body, div, span,
+applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dd, dl, dt, li, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	line-height: 1;
+	font-family: inherit;
+	text-align: left;
+	vertical-align: baseline;
+}
+a img, :link img, :visited img {border: 0}
+table {border-collapse: collapse; border-spacing: 0}
+ul {list-style: none}
+q:before, q:after,
+blockquote:before, blockquote:after {content: ""}
+
+/*#######################
+  Element Styles 
+#######################*/
+
+body {font-size:20px; font-family:Georgia, Times, "Times New Roman", serif; color:#fff; background:#599de3 url(../images/header_bg.jpg) left top repeat-x}
+h2, h3, h4, h5, p, ul, ol, dl {margin:15px 0}
+h2, h3, h4, h5 {font-weight:bold}
+h2 {font-size:50px}
+h3 {font-size:22px}
+h4 {font-size:1.15em}
+h5 {font-size:1em; font-style:italic; color:gray}
+a {color:#8efbc1; outline:none}
+	a:hover {text-decoration:none}
+dt {margin:15px 0; font-weight:bold}
+dd {margin:5px 0 5px 15px}
+ol {margin-left:25px}
+
+/*#######################
+  Layout Styles 
+#######################*/
+
+#wrapper {width:930px; padding:5px 15px; margin:0 auto; background:url(../images/footer_bg.jpg) 50% bottom no-repeat}
+
+#header {float:left; width:100%}
+	h1 {float:left; display:inline; padding:5px 0 5px 25px; font-size:2em; text-transform:lowercase; background:url(../images/example_logo.png) left 50% no-repeat}	
+	#navigation {float:right; width:45px; }
+		#navigation li {float:left; display:inline; margin-left:55px; font-size:1.15em; text-transform:lowercase}
+			#navigation li a {color:#fff}
+				#navigation li a:hover {text-decoration:none}
+
+#content {clear:both; float:left; padding-top:70px}	
+
+	#intro {width:619px; padding-right:311px; font-size:36px}
+
+	#content p {line-height:1.25em}
+	#content ul {margin-left:25px; list-style-type:disc}
+		#content li {margin:10px 0}	
+	#content .two_columns {float:left; display:inline; width:450px; margin-right:15px}
+	#content .three_columns {float:left; display:inline; width:295px; margin-right:15px}
+
+	
+/* Form Styles */
+input, textarea {padding:3px; font-size:.95em; font-family:Helvetica, Arial, Verdana, sans-serif; font-style:italic; color:gray}
+input {width:250px}
+textarea {width:350px; height:150px}
+#submit {width:100px; font-weight:bold; color:#000; font-style:normal}
+	
+#footer {clear:both; padding:50px 0 30px 0; font-size:.9em; font-style:italic}
