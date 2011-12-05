@@ -1,11 +1,13 @@
 
-function searchOffers(str)
+function searchOffers(selectObj)
 {
+	var str = selectObj.options[selectObj.selectedIndex].value;
 	// get the index of the selected option 
-	if(str=="")
+	if(str==""){}
 	//do something
 else{
-if (window.XMLHttpRequest)
+ o=window.open("search.html");
+	if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
   }
@@ -17,43 +19,32 @@ xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-	 o=window.open("search.html");
+	alert("worked"+xmlhttp.responseText);
+	
    	showOfferList(xmlhttp.responseText);
     }
   }
-xmlhttp.open("GET","getData.php?function="+category+"&category="+str,true);
+xmlhttp.open("GET","getData.php?function=category&category="+str,true);
 xmlhttp.send();
+
  
  }
 }
 
 function showOfferList(databaseReturn)
 {
-o.document.getElementById('offers').innerHTLM=databaseReturn;
-//put the html the php returned somewhere
+
+ var list = o.document.getElementById('offers');
+  list.innerHTML=databaseReturn;
+	
 }
 
 function showOffer(offerName)
 {
  //??
+ alert();
 }
 /*
-function addElement(url)
-{
- var list= o.document.getElementById('offers');
- var newItem = document.createElement('li');
- var img = document.createElement('img');
- img.setAttribute('src', url);
- newItem.appendChild(img);
-
- list.appendChild(newItem);
- if(url=="images/question_shark.png")
- {  		 
-			addSelector();
-			}
-}
-
-
 function addSelector()
 {
 
