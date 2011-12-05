@@ -1,0 +1,4 @@
+acrauter@inf	Arthur	m	1991-08-18	noob123	GTN
+ale@inf	Alessandra	f	1990-12-26	saf123	T
+jose@npc	Jose	m	1980-12-12	123456	EMG
+maria@npc	Maria	f	1983-11-23	123456	ME
