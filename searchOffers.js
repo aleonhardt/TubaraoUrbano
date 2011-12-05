@@ -6,7 +6,7 @@ function searchOffers(selectObj)
 	if(str==""){}
 	//do something
 else{
- o=window.open("search.html");
+ o=window.open("offer.html");
 	if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
@@ -34,24 +34,26 @@ xmlhttp.send();
 function showOfferList(databaseReturn)
 {
 
- var list = o.document.getElementById('offers');
+	var tit = o.document.getElementById("titulo");
+	tit.innerHTML="Ofertas da categoria pesquisada";
+ var list = o.document.getElementById("offerdata");
   list.innerHTML=databaseReturn;
   	
 }
 
 function showOfferData(databaseReturn)
 {
-	var offerData = document.getElementById('offerdata');
+
+	var tit = o.document.getElementById("titulo");
+	tit.innerHTML="Oferta";
+	var offerData = o.document.getElementById("offerdata");
   offerData.innerHTML=databaseReturn;
 }
 
 function showOffer(offerName)
 {
- alert(offerName);
-window.open("offer.html", "_self");
-window.onload= function()
-{
-	if (window.XMLHttpRequest)
+ alert("clicked");
+	if (o.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
   }
@@ -70,7 +72,7 @@ xmlhttp.onreadystatechange=function()
   xmlhttp.open("GET","getData.php?function=oneOffer&name="+offerName,true);
 	xmlhttp.send();
   
-	}
 }
+
 
 
