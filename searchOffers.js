@@ -1,38 +1,43 @@
 
- var offerLists = new Array(4);
- offerLists["Procure outras ofertas"] = ["images/question_shark.png"]; 
- offerLists["Gastronomia"] = ["images/gastronomia0.png", "images/gastronomia1.png"]; 
- offerLists["Turismo"] = ["images/turismo0.png", "images/turismo1.png"]; 
- offerLists["Moda"] = ["images/moda0.png"]; 
- offerLists["Estética"]= ["images/estetica0.png", "images/estetica1.png"]; 
- offerLists["Entretenimento"]= ["images/entretenimento0.png", "images/entretenimento1.png", "images/entretenimento2.png"]; 
-
-
-function searchOffers(selectObj)
-{
+function searchOffers(str)
+{o=window.open("search.html", '_self');
 	// get the index of the selected option 
- var idx = selectObj.selectedIndex; 
- // get the value of the selected option 
-var which = selectObj.options[idx].value; 
-ofList=offerLists[which];
- o=window.open("search.html");
-//document.URL="search.html";
- showOfferList(ofList);
+	if(str=="")
+	//do something
+else{
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+	 
+   	showOfferList(xmlhttp.responseText);
+    }
+  }
+xmlhttp.open("GET","getData.php?function="+category+"&category="+str,true);
+xmlhttp.send();
+ 
+ }
 }
 
-function showOfferList(ofList)
+function showOfferList(databaseReturn)
 {
-o.onload=function(){
- var i=0;
-
-
- for(i=0; i< (ofList.length); i++)
- {
-  		addElement(ofList[i]);
- }
- }
+o.document.getElementById('offers').innerHTLM=databaseReturn;
+//put the html the php returned somewhere
 }
 
+function showOffer(offerName)
+{
+ //??
+}
+/*
 function addElement(url)
 {
  var list= o.document.getElementById('offers');
@@ -80,5 +85,5 @@ selector.setAttribute('id', "selector");
 	   selector.addEventListener("change", function () { searchOffers (this)},false);
 	
 }	
-
+*/
 
