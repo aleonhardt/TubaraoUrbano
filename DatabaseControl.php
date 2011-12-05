@@ -46,4 +46,24 @@ function addConsumidor($email, $nome, $senha, $sexo, $interesses, $nascimento)
 	
 }
 
+function updateDatabase($table, $key, $THEkey, $property, $value)
+{
+
+	$con = mysql_connect('localhost', 'root');
+	if(!$con)
+	{
+	die('Could not connect: ' . mysql_error());
+	}
+		
+	mysql_select_db("tubaraourbano", $con);
+	
+	$sql = "UPDATE ".$table." SET ".$property."='".$value."' WHERE ".$key."='".$THEkey."'";
+	mysql_query($sql);
+	
+	
+	
+	mysql_close($con);
+
+}
+
 ?>
