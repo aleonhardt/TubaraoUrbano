@@ -43,10 +43,10 @@ function showOfferList(databaseReturn)
 
 function showOfferData(databaseReturn)
 {
-	
-	var tit = document.getElementById("titulo");
+
+	var tit = o.document.getElementById("titulo");
 	tit.innerHTML="Oferta";
-	var offerData = document.getElementById("offerdata");
+	var offerData = o.document.getElementById("offerdata");
   offerData.innerHTML=databaseReturn;
 }
 
