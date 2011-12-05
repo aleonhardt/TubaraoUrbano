@@ -1,6 +1,6 @@
 
 function searchOffers(str)
-{o=window.open("search.html", '_self');
+{
 	// get the index of the selected option 
 	if(str=="")
 	//do something
@@ -17,7 +17,7 @@ xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-	 
+	 o=window.open("search.html");
    	showOfferList(xmlhttp.responseText);
     }
   }

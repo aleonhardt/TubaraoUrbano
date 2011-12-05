@@ -2,13 +2,13 @@
 function getDatabaseData($table, $key, $THEkey)
 {
 
-$con = mysql_connect('localhost', 'tubarao', 'whatISTHIS');
+$con = mysql_connect('localhost', '', 'rawr');
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
-mysql_select_db("ajax_demo", $con);
+mysql_select_db("tubaraourbano", $con);
 
 $sql="SELECT * FROM".$table."WHERE".$key." = '".$THEkey."'";
 
