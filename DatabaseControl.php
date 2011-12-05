@@ -26,5 +26,24 @@ if(mysql_num_rows($result)<1){
 
 }
 
+function addConsumidor($email, $nome, $senha, $sexo, $interesses, $nascimento)
+{
+	$con = mysql_connect('localhost', 'root');
+	if(!$con)
+	{
+	die('Could not connect: ' . mysql_error());
+	}
+		
+	mysql_select_db("tubaraourbano", $con);
+	
+	$sql = "INSERT INTO consumidor VALUES('".$email."','".$nome."','".$sexo."','".$nascimento."','".$senha."','".$interesses."')";
+	$result = mysql_query($sql);
+	
+	echo $result;
+	
+	
+	mysql_close($con);
+	
+}
 
 ?>
