@@ -19,9 +19,9 @@ xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-	alert("worked"+xmlhttp.responseText);
-	
-   	showOfferList(xmlhttp.responseText);
+		o.onload=function(){
+			showOfferList(xmlhttp.responseText);
+		}
     }
   }
 xmlhttp.open("GET","getData.php?function=category&category="+str,true);
