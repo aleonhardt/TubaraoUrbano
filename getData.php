@@ -26,13 +26,13 @@ $i++;
 }
 }
 else
-	echo "<li><img  src=\"images/question_shark.png\"/></li>";
+	echo "<li><img src=\"images/question_shark.png\"/></li>";
 
 }
 
 function getOffer($name)
 {
-$offer=getDatabaseData("oferta", "nomeoferta", $name);
+$offer=getDatabaseData("oferta", "nomeproduto", $name);
 
 //how to show the offer?
 
