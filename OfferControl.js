@@ -7,6 +7,7 @@ function searchOffers(selectObj)
 	//do something
 else{
  o=window.open("offer.html");
+ 
 	if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
@@ -17,11 +18,14 @@ else
   }
 xmlhttp.onreadystatechange=function()
   {
+
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-		o.onload=function(){
+	  
+		o.onload=setTimeout(function(){
+
 			showOfferList(xmlhttp.responseText);
-		}
+		}, 100);
     }
   }
 xmlhttp.open("GET","getData.php?function=category&category="+str,true);
