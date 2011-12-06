@@ -18,9 +18,9 @@ exit();
 function getCategory($category){
 
 $offersFromCategory = getDatabaseData("oferta", "categoria", $category);
+echo "<ul style=\"POSITION: absolute; WIDTH: 900px; TOP: 300px\" id=\"offers\" name=\"OFFERS\">";
 
 if($offersFromCategory!=""){
-echo "<ul style=\"POSITION: absolute; WIDTH: 900px; TOP: 300px\" id=\"offers\" name=\"OFFERS\">";
 $i=0;
 while($i<count($offersFromCategory)){
 $row = $offersFromCategory[$i];
@@ -46,7 +46,7 @@ $i++;
 echo "</ul>";
 }
 else
-	echo "<li><img src=\"images/question_shark.png\"/></li>";
+	echo "<li><img src=\"images/question_shark.png\"/></li></ul>";
 
 }
 
