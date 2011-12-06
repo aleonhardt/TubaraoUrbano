@@ -1,2 +1,6 @@
-Credit Deafult Swap	Lucro garantido em abusos do sistema financeiro	d:/001.jpg	200.00	100.00	Goldman Sachs	2011-12-25	0	N
-Old Number 7	whiskey destilado Jack Daniels	d:/002.jpg	100.00	75.50	Jack Daniels Destillery	2011-12-25	0	G
+Credit Default Swap	Lucro garantido em abusos do sistema financeiro	images/cds.jpg	200.00	100.00	Goldman Sachs	2011-12-25	0	N
+Old Number 7	whiskey destilado Jack Daniels	images/oldnumber7.jpg	100.00	75.50	Jack Daniels Destillery	2011-12-25	0	G
+Tomates frescos	os melhores tomates, diretamente da hosrta para a sua mesa	images/tomate.jpg	50.00	8.00	Alessandra	2011-12-12	0	G
+Viagem para Paris	a cidade luz como você nunca viu!	images/paris.jpg	5000.00	300.00	Paris Travels	2011-12-31	0	T
+Iphone 50gs	Porque quanto mais melhor!	images/iphone.jpg	1457.00	75.00	Iphone Pirata	0	E
+Elven Sword	Porque 1% dos aventureiros de Skyrim possuem 90% das almas de Dragão. Faça parte dessa elite!	images/elvensword.jpg	6890.00	300.00	Dragonborns	2012-12-12	0	E
