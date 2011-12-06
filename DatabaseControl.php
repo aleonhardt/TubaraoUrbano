@@ -101,5 +101,17 @@ function updateDatabase($table, $key, $THEkey, $property, $value)
 	mysql_close($con);
 
 }
+function getRandomRowDatabaseData($table){
+$con = mysql_connect('localhost', 'root');
+	if(!$con)
+	{
+	die('Could not connect: ' . mysql_error());
+	}
+		
+	mysql_select_db("tubaraourbano", $con);
+$sql="select * from ".$table." order by rand() limit 1";
+$random_row = mysql_fetch_array(mysql_query($sql));
+return $random_row;
+}
 
 ?>
