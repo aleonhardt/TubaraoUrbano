@@ -62,6 +62,25 @@ function addFornecedor($nomeempresa, $cnpj, $endereco, $emailpagseguro, $contrat
 	return $result;
 }
 
+function addOferta($nomeproduto, $descricao, $foto, $precooriginal, $precovenda, $fornecedor, $validade, $vendidos, $categoria)
+{
+	$con = mysql_connect('localhost', 'root');
+	if(!$con)
+	{
+	die('Could not connect: ' . mysql_error());
+	}
+		
+	mysql_select_db("tubaraourbano", $con);
+	
+	
+	$sql = "INSERT INTO oferta VALUES('".$nomeproduto."','".$descricao."','".$foto."','".$precooriginal."','".$precovenda."','".$fornecedor."','".$validade."','".$vendidos."','".$categoria."')";
+	
+	$result = mysql_query($sql);
+	
+	mysql_close($con);
+	return $result;
+}
+
 
 function updateDatabase($table, $key, $THEkey, $property, $value)
 {
