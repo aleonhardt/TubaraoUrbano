@@ -10,10 +10,8 @@ if($_POST['registro'] == "Registrar Fornecedor")
 	$endereco = $_POST['endereco'];
 	$contrato = "";
 	
-	echo $cnpj;
-
 	$result = addFornecedor($nomeempresa, $cnpj, $endereco, $emailpagseguro, $contrato, $senha);
-	
+		
 	if($result == 1)
 	{
 		echo "<h1>Registrado com sucesso: <a href=\"index.html\">Home</a> </li></h1>";
