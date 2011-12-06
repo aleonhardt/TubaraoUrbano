@@ -1,7 +1,7 @@
 <?php
 include 'DatabaseControl.php';
 
-if($_POST['registro'] == "Registrar")
+if($_POST['registro'] == "Registrar Consumidor")
   {
    
     $email = $_POST['email'];
@@ -32,11 +32,18 @@ if($_POST['registro'] == "Registrar")
 
 	$nascimento = $_POST['nascimento'];
 	
-	addConsumidor($email, $nome, $senha, $sexo, $interesses, $nascimento);
+		
+	$result = addConsumidor($email, $nome, $senha, $sexo, $interesses, $nascimento);
 	
+	if($result == 1)
+	{
+		echo "<h1>Registrado com sucesso: <a href=\"index.html\">Home</a> </li></h1>";
+	}
+	else
+	{
+		echo "<h1>Registro falhou: <a href=\"index.html\">tente novamente!</a> </li> </h1>";
+	}
 		
   }
-
-
 
 ?>

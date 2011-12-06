@@ -9,7 +9,7 @@
   <body>
     <div id="wrapper">
       <div id="header">
-        <h1>Login ou Registre-se</h1>
+        <h1>Fornecedor, Login ou Registre-se</h1>
         <ul id="navigation">
           <li>
             <a href="index.html">Home</a> </li>
@@ -20,25 +20,18 @@
         <p>Nesta página você poderá logar-se caso já tenho uma conta ou criar um conta e fazer parte do tubarão urbano.</p>
         <div class="two_columns">
           <h3>Registre-se:</h3><!--To make this form work, you must acquire a formmail script and add the proper hidden fields at the bottom of the form.  This is just an example -->
-		  <form action="registrarConsumidor.php" method="post">
-			<p>Email:</p>
-			<p><input type="text" name="email" value=""/></p>
-			<p>Nome:</p>
-			<p><input type="text" name="nome" value=""/></p>
+		  <form action="registrarFornecedor.php" method="post">
+			<p>Nome Empresa:</p>
+			<p><input type="text" name="nomeempresa" value=""/></p>
 			<p>Senha:</p>
 			<p><input type="password" name="senha" value=""/></p>
-			<p>Sexo:</p>
-			<p><input type="radio" name="sexo" value="m" />Masculino</p>
-			<p><input type="radio" name="sexo" value="f" />Feminino</p>
-			<p>Interesses:</p>
-			<p><input type="checkbox" name="gastronomia" value="on" />Gastronomia</p>
-			<p><input type="checkbox" name="entretenimento" value="on"/>Entretenimento</p>
-			<p><input type="checkbox" name="turismo" value="on"/>Turismo</p>
-			<p><input type="checkbox" name="moda" value="on"/>Moda</p>
-			<p><input type="checkbox" name="estetica" value="on"/>Estética</p>
-			<p>Data de nascimento (YYYY-MM-DD):</p>
-			<p><input type="text" name="nascimento" value=""/></p>
-			<input type="submit" name="registro" value="Registrar Consumidor" />
+			<p>CNPJ:</p>
+			<p><input type="text" name="cnpj" value=""/></p>
+			<p>Endereço:</p>
+			<p><input type="text" name="endereco" value=""/></p>
+			<p>Email PagSeguro:</p>
+			<p><input type="text" name="emailpagseguro" value=""/></p>
+			<input type="submit" name="registro" value="Registrar Fornecedor" />
 
 		  </form></div>
         <div class="two_columns">
