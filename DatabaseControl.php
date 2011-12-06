@@ -38,13 +38,30 @@ function addConsumidor($email, $nome, $senha, $sexo, $interesses, $nascimento)
 	
 	$sql = "INSERT INTO consumidor VALUES('".$email."','".$nome."','".$sexo."','".$nascimento."','".$senha."','".$interesses."')";
 	$result = mysql_query($sql);
-	
-	echo $result;
-	
-	
 	mysql_close($con);
 	
+	return $result;
 }
+
+function addFornecedor($nomeempresa, $cnpj, $endereco, $emailpagseguro, $contrato, $senha)
+{
+	$con = mysql_connect('localhost', 'root');
+	if(!$con)
+	{
+	die('Could not connect: ' . mysql_error());
+	}
+		
+	mysql_select_db("tubaraourbano", $con);
+	
+	$contrato = "verificar";
+	
+	$sql = "INSERT INTO fornecedor VALUES('".$nomeempresa."','".$cnpj."','".$endereco."','".$emailpagseguro."','".$contrato."','".$senha."')";
+	$result = mysql_query($sql);
+	
+	mysql_close($con);
+	return $result;
+}
+
 
 function updateDatabase($table, $key, $THEkey, $property, $value)
 {
