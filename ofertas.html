@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Login Tubarao Urbano</title>
+    <meta content="text/html; charset=unicode" http-equiv="Content-Type"/>
+    <link rel="stylesheet" type="text/css" href="css/default.css" media="screen"/>
+    
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <h1>Fornecedor, adicione a sua oferta:</h1>
+        <ul id="navigation">
+          <li>
+            <a href="index.html">Home</a> </li>
+        </ul>
+      </div>
+      <div id="content">
+        
+        <div class="two_columns">
+          <h3>Informe:</h3>
+		  <form action="registrarOferta.php" method="post">
+			<p>Nome Produto:</p>
+			<p><input type="text" name="nomeproduto" value=""/></p>
+			<p>Descrição:</p>
+			<p><textarea name="descricao" cols="30" rows="4"value ="" ></textarea></p>
+			<p>Foto:</p>
+			<p><input type="text" name="foto" value=""/></p>
+			<p>Preço Original:</p>
+			<p><input type="text" name="precooriginal" value=""/></p>
+			<p>Preço Venda:</p>
+			<p><input type="text" name="precovenda" value=""/></p>
+			<p>Fornecedor:</p>
+			<p><input type="text" name="fornecedor" value=""/></p>
+			<p>Validade YYYY-MM-DD:</p>
+			<p><input type="text" name="validade" value=""/></p>
+			<p>Categoria:</p>
+			<p><input type="radio" name="categoria" value="G" />Gastronomia</p>
+			<p><input type="radio" name="categoria" value="N"/>Entretenimento</p>
+			<p><input type="radio" name="categoria" value="T"/>Turismo</p>
+			<p><input type="radio" name="categoria" value="M"/>Moda</p>
+			<p><input type="radio" name="categoria" value="E"/>Estética</p>
+			
+			<input type="submit" name="enviar" value="Enviar Oferta" />
+		
+		  </form></div>
+        <div class="two_columns">
+          <h3>Login:</h3>
+          <form action="dologin.php" method="post">
+			<p>Nome Empresa:</p>
+			<p><input type="text" value="" name="nomeempresa"/></p>
+			<p>Senha:</p>
+			<p><input type="password" value="" name="senha"/></p>
+			
+			<input type="submit" name="login" value="Login Fornecedor" />
+			
+		  </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
